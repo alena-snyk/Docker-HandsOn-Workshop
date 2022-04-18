@@ -1,5 +1,5 @@
 
-# Dockerize Node.js Application
+# Dockerize a Node.js Application 🐳
 [Slides](https://docs.google.com/presentation/d/1h8DPC6Sfs2Ezgi3EF39eTWlAeJDAvXSHSkvhnX14blI/edit#slide=id.g11e513142e0_0_105)
 
 
@@ -66,7 +66,7 @@ Create a Dockerfile inside your current directory by running the Touch command:
 ```
 touch Dockerfile
 ```
-At this point we will build a Dockerfile together! :D 
+At this point we will build a Dockerfile together based on the commands you've just learned! 😀
 
 ## Build and run a web application packaged in a Docker Image
 
@@ -128,8 +128,12 @@ docker ps
 docker exec -it <container id> bash 
 ```
 Will enter an existing container 
-OR 
 ```
+
+<img width="747" alt="image" src="https://user-images.githubusercontent.com/97297322/163837030-0ac52b80-5139-42df-8f9b-33d60da065e0.png">
+
+OR
+
 docker run -it my-app:5 bash
 ```
 Will enter a new container 
@@ -140,11 +144,11 @@ ls
 ```
 ### 👉 Create a directory inside of the container, not in my machine!
 ```
-Mkdir -p /home/app
+mkdir -p /home/app
 ```
 ### 👉 Copy file from my host inside my container image ("." meaning local)
 ```
-Copy . /home/app
+copy . /home/app
 ```
 
 ### 👉 Exit Container
