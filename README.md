@@ -34,6 +34,8 @@ git clone repo https://github.com/alena-snyk/Docker-HandsOn-Workshop.git
 ## Undesrtand a Docker File Instructions
 
 #### FROM 
+The FROM instruction initializes a new build stage and sets the Base Image for subsequent instructions. 
+A **valid** Dockerfile must start with a FROM instruction
 ```
 FROM node:14
 ```
@@ -192,6 +194,7 @@ Clinton Questions:
 Copy files from a local source location to a destination in the Docker 
 COPY . .
 7. inside a container: what else can I do besides #ls 
+8. Sometimes docker wouldn't run only if I kill em
 
 
 
