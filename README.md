@@ -7,15 +7,15 @@
 
 
  * [Undesrtand a Docker File Instructions](#undesrtand-a-docker-file-instructions)
- * [Create a Dockerfile](create-a-dockerfile)
- * [Build and run a web application packaged in a Docker Image](build-and-run-a-web-application-packaged-in-a-docker-image)
- * [Manipulate Images And Containers](manipulate-images-and-containers)
+ * [Create a Dockerfile](#create-a-dockerfile)
+ * [Build and run a web application packaged in a Docker Image](#build-and-run-a-web-application-packaged-in-a-docker-image)
+ * [Manipulate Images And Containers](#manipulate-images-and-containers)
    - Display a list of containers
    - What's inside the Container?
    - Stop Container
    - Remove Container
    - Remove Image
- * [Modify a Dockerfile](modify-a-dockerfile)
+ * [Modify a Dockerfile](#modify-a-dockerfile)
 
 
 ## Prerequisites
@@ -184,6 +184,12 @@ rebuild  & run
 ## Thank You! 
 
 
+Clinton Questions:
+1. Expose
+2. - p 9000:8080
+3. When rebuilding an image - should I retag it?
+4. Why do I have to tag image when Docker push
+5. Will From 16 work if Im not logged in docker?
 
 
 
