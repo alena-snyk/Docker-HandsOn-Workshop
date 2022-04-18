@@ -91,12 +91,37 @@ arguments: -p: define the port
            -d: run in detached mode
 
 ```
-docker run -p 4001:8080 -d my-app:5
+docker run -p 9000:8080 -d my-app:5
 ```
 
 By default, Docker doesn't allow inbound network requests to reach your container. 
 You need to tell Docker to assign a specific port number from your computer to a specific port number in the container by adding the -p option to docker run. 
 This instruction enables network requests to the container on the specified port.
+
+<img width="874" alt="image" src="https://user-images.githubusercontent.com/97297322/163819629-f42cf83f-f162-44e4-b8ae-073a84acccd0.png">
+
+
+```
+docker logs <id>
+```
+<img width="685" alt="image" src="https://user-images.githubusercontent.com/97297322/163819747-cb76af64-6062-409b-a999-8a56301bd4a4.png">
+
+
+
+##### Test
+
+```
+curl http://localhost:9000/
+```
+OR
+
+```
+open the URL http://localhost:9000/
+```
+
+<img width="356" alt="image" src="https://user-images.githubusercontent.com/97297322/163820558-800a0035-5213-4d5a-b753-da06914eb157.png">
+
+
 
 ## Display the list of containers
 ```
