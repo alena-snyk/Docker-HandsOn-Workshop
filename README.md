@@ -43,10 +43,8 @@ Creare A directory to hold the application code inside the image
 ```
 WORKDIR /usr/src/app
 ```
-
 #### COPY
 Copy files from a local source location to a destination in the Docker container. 
-
 ```
 COPY package*.json ./
 ```
@@ -55,20 +53,11 @@ Downloads a package and it's dependencies
 ```
 RUN npm install
 ```
-#### COPY 
-Copy files from a local source location to a destination in the Docker 
-
-```
-COPY . .
-```
-
 ### CMD 
 Define the command to run your application
 ```
 CMD [ "node", "server.js" ]
 ```
-
-
 
 ## Create a Dockerfile
 Create a Dockerfile inside your current directory by running the Touch command:
@@ -199,6 +188,10 @@ Clinton Questions:
 3. When rebuilding an image - should I retag it?
 4. Why do I have to tag image when Docker push
 5. Will From 16 work if Im not logged in docker?
+6. #### COPY 
+Copy files from a local source location to a destination in the Docker 
+COPY . .
+7. inside a container: what else can I do besides #ls 
 
 
 
