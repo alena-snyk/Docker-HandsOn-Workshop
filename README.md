@@ -125,10 +125,15 @@ docker ps
 
 ### 👉 Enter a Container
 ```
-docker run -it my-app:5 bash
-OR
-docker exec -it <container id> bash
+docker exec -it <container id> bash 
 ```
+Will enter an existing container 
+OR 
+```
+docker run -it my-app:5 bash
+```
+Will enter a new container 
+
 ### 👉 List folders inside container
 ```
 ls
