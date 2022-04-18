@@ -97,8 +97,27 @@ docker ps
 
 
 ## Enter Container
-docker run -it my-app:5 bash
 
+```
+docker run -it my-app:5 bash
+OR
+docker exec -it <container id> bash
+```
+List folders
+
+```
+ls
+```
+
+## Create a directory inside of the container, not in my machine!
+```
+Mkdir -p /home/app
+```
+
+## Exit Container
+```
+exit
+``` 
 
 ## Create a directory inside of the container, not in my machine!
 ```
