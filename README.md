@@ -3,20 +3,22 @@
 [Slides](https://docs.google.com/presentation/d/1h8DPC6Sfs2Ezgi3EF39eTWlAeJDAvXSHSkvhnX14blI/edit#slide=id.g11e513142e0_0_105)
 
 
-#### Learning objectives:
+## Learning objectives:
 
-##### Undesrtand a Docker File Instructions
-##### Create a Dockerfile
-##### Build and run a web application packaged in a Docker image
-#####  Manipulate Images/Containers  
-######   - Display a list of containers
-######   - What's inside the Container?
-######   - Stop Container
-######   - Remove Container
-######   - Remove Image
-##### Modify a Dockerfile
 
-### Prerequisites
+ * [Undesrtand a Docker File Instructions](#undesrtand-a-docker-file-instructions)
+ * [Create a Dockerfile](create-a-dockerfile)
+ * [Build and run a web application packaged in a Docker Image](build-and-run-a-web-application-packaged-in-a-docker-image)
+ * [Manipulate Images And Containers](manipulate-images-and-containers)
+   - Display a list of containers
+   - What's inside the Container?
+   - Stop Container
+   - Remove Container
+   - Remove Image
+ * [Modify a Dockerfile](modify-a-dockerfile)
+
+
+## Prerequisites
 In your terminal run the following commands:
 
 ```
@@ -65,17 +67,17 @@ CMD [ "node", "server.js" ]
 
 
 
-## Create a Dockerfile together
+## Create a Dockerfile
 ```
 touch Dockerfile
 ```
 
-## Build and run a web application packaged in a Docker image
+## Build and run a web application packaged in a Docker Image
 
 ```
 docker build -t my-app:5 .
 ```
-##### List Images
+## Manipulate Images And Containers
 
 ```
 docker images
@@ -122,15 +124,14 @@ open the URL http://localhost:9000/
 <img width="356" alt="image" src="https://user-images.githubusercontent.com/97297322/163820558-800a0035-5213-4d5a-b753-da06914eb157.png">
 
 
-
-## Display the list of containers
+##### Display the list of containers
 ```
 docker ps
 ```
 <img width="556" alt="image" src="https://user-images.githubusercontent.com/97297322/163789466-483bb15e-c41a-4636-b3b3-361d5dccc612.png">
 
 
-## Enter Container
+##### Enter Container
 
 ```
 docker run -it my-app:5 bash
@@ -143,17 +144,17 @@ List folders
 ls
 ```
 
-## Create a directory inside of the container, not in my machine!
+##### Create a directory inside of the container, not in my machine!
 ```
 Mkdir -p /home/app
 ```
 
-## Exit Container
+##### Exit Container
 ```
 exit
 ``` 
 
-## Create a directory inside of the container, not in my machine!
+##### Create a directory inside of the container, not in my machine!
 ```
 Mkdir -p /home/app
 ```
@@ -162,8 +163,8 @@ Mkdir -p /home/app
 ```
 Copy . /home/app
 ```
-
-## In order to modify image you need to rebuild it:
+## Modify a Dockerfile
+## After modifying an image you need to rebuild it:
 ```
 
 find image
