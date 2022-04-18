@@ -1,28 +1,27 @@
 # Docker-HandsOn-Workshop
+[Slides: https://docs.google.com/presentation/d/1h8DPC6Sfs2Ezgi3EF39eTWlAeJDAvXSHSkvhnX14blI/edit#slide=id.g11e513142e0_0_105]
+
+### prerequisites
+mkdir docker-workshop
+
+cd docker-workshop
+
+git clone repo https://github.com/alena-snyk/Docker-HandsOn-Workshop.git
+
+touch Dockerfile
 
 
-Docker build -t my-app:1.0 .
+### Tasks:
 
-```
-docker build .  -t my-app:1.0
-
-```
-
-```
-docker images
-
-```
-
-# Tasks:
-## Working with the Docker File
-##  Build a docker image from the application
-##  Run Container
-##  Display a list of containers
-##  Enter Container - bash
-##  Stop Image
-##  Remove Image
-##  Remove Container
-##  Remove a list of containers
+####  Working with the Docker File
+####  Build a docker image from the application
+####  Run Container
+####  Display a list of containers
+####  Enter Container - bash
+####  Stop Image
+####  Remove Image
+####  Remove Container
+####  Remove a list of containers
 
 
 ## Working with the Docker File
@@ -31,43 +30,103 @@ Dokerfile a blurprint for creating an images
 
 ### Dockerfile Commands explained
 
-#### Create a directory inside of the container, not in my machine!
-```bash
-mkdir -p /home/app
+#### FROM 
+```
+FROM node:16
 ```
 
-#### Copy file from my host inside my container image ("." meaning local)
+#### WORKDIR 
+Creare A directory to hold the application code inside the image
 ```
-Copy . /home/app
+WORKDIR /usr/src/app
 ```
+
+
+
+### COPY
+Copy files from a local source location to a destination in the Docker container. 
+
+```
+COPY package*.json ./
+```
+### RUN 
+Downloads a package and it's dependencies
+
+```
+RUN npm install
+```
+### COPY . .
+```
+COPY . .
+```
+### EXPOSE
+```
+EXPOSE 8080
+```
+### CMD
+```
+CMD [ "node", "server.js" ]
+```
+
 
 ## Build a docker image based on a Docker File
 
 ```
-docker build -t my-app:1.0 .
+docker build -t my-app:5 .
 ```
-## List an existing images
+## List Images
 
 ```
 docker images
+OR
+docker image ls
 ```
+<img width="1199" alt="image" src="https://user-images.githubusercontent.com/97297322/163794721-93d027e3-891b-4d58-8a15-e498394b43a4.png">
+
 
 ## Run container (arguments: -p: define the port -d run in detached mode)
 ```
-docker run -p 4001:8080 -d my-app:1.0
+docker run -p 4001:8080 -d my-app:5
 ```
 
 ## Display the list of containers
 ```
 docker ps
 ```
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/97297322/163789466-483bb15e-c41a-4636-b3b3-361d5dccc612.png">
+
 
 ## Enter Container
-docker run -it my-app bash
+docker run -it my-app:5 bash
 
 
+## Create a directory inside of the container, not in my machine!
+```
+Mkdir -p /home/app
+```
 
+## Copy file from my host inside my container image ("." meaning local)
+```
+Copy . /home/app
+```
 
+## In order to modify image you need to rebuild it:
+```
+
+find image
+docker ps -a | grep my-app
+
+delete container
+docker rm <container id> 
+
+delete image
+docker rmi <image id>
+
+modify a dockerfile 
+Add a line to a Dockerfile:
+From: Node 16
+
+rebuild 
 
 
 
