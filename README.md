@@ -1,5 +1,5 @@
-# Docker Workshop 
-## Dockerize Node.js Application
+
+# Dockerize Node.js Application
 [Slides](https://docs.google.com/presentation/d/1h8DPC6Sfs2Ezgi3EF39eTWlAeJDAvXSHSkvhnX14blI/edit#slide=id.g11e513142e0_0_105)
 
 
@@ -35,7 +35,7 @@ git clone repo https://github.com/alena-snyk/Docker-HandsOn-Workshop.git
 
 #### FROM 
 ```
-FROM node:16
+FROM node:14
 ```
 
 #### WORKDIR 
@@ -158,8 +158,7 @@ exit
 
 
 ## Modify a Dockerfile
-## After modifying an image you need to rebuild it:
-
+### Important: After modifying an image you must rebuild it:
 
 find image
 ```
@@ -173,13 +172,23 @@ delete image
 ```
 docker rmi <image id>
 ```
-modify a dockerfile 
-Add a line to a Dockerfile:
+modify a Dockerfile
+pull an updated Node version
+FROM node:16
 ```
 From: Node 16
 ```
 rebuild  & run 
 
+
+## Push Imange into Dockerhub
+
+```
+docker tag my-app:5 REPOSITORY/my-app:1.1
+```
+```
+docker push REPOSITORY/my-app:1.1
+```
 
 ## Thank You! 
 
