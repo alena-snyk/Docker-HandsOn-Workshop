@@ -22,9 +22,9 @@
 In your terminal run the following commands:
 
 ```
-git clone repo https://github.com/alena-snyk/Docker-HandsOn-Workshop.git
+git clone https://github.com/alena-snyk/Docker-HandsOn-Workshop.git
 
-cd hands-on-docker-workshop
+cd Docker-HandsOn-Workshop/
 
 ```
 
