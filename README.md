@@ -6,7 +6,7 @@
 ## Learning objectives:
 
 
- * [Undesrtand a Docker File Instructions](#undesrtand-a-docker-file-instructions)
+ * [Understand a Docker File Instructions](#understand-a-docker-file-instructions)
  * [Create a Dockerfile](#create-a-dockerfile)
  * [Build and run a web application packaged in a Docker Image](#build-and-run-a-web-application-packaged-in-a-docker-image)
  * [Manipulate Images And Containers](#manipulate-images-and-containers)
