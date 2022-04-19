@@ -182,6 +182,9 @@ rebuild  & run
 ## Push Imange into Dockerhub
 
 ```
+docker login
+```
+```
 docker tag my-app:5 REPOSITORY/my-app:1.1
 in my case:
 docker tag my-app:5 alenasnyk/my-app:1.1
