@@ -22,11 +22,9 @@
 In your terminal run the following commands:
 
 ```
-mkdir docker-workshop
-
-cd docker-workshop
-
 git clone repo https://github.com/alena-snyk/Docker-HandsOn-Workshop.git
+
+cd hands-on-docker-workshop
 
 ```
 
@@ -55,7 +53,7 @@ Downloads a package and it's dependencies
 ```
 RUN npm install
 ```
-### CMD 
+#### CMD 
 Define the command to run your application
 ```
 CMD [ "node", "server.js" ]
@@ -185,25 +183,17 @@ rebuild  & run
 
 ```
 docker tag my-app:5 REPOSITORY/my-app:1.1
+in my case:
+docker tag my-app:5 alenasnyk/my-app:1.1
 ```
 ```
 docker push REPOSITORY/my-app:1.1
+in my case:
+docker push alenasnyk/my-app:1.1
 ```
 
 ## Thank You! 
 
-
-Clinton Questions:
-1. Expose
-2. - p 9000:8080
-3. When rebuilding an image - should I retag it?
-4. Why do I have to tag image when Docker push
-5. Will From 16 work if Im not logged in docker?
-6. #### COPY 
-Copy files from a local source location to a destination in the Docker 
-COPY . .
-7. inside a container: what else can I do besides #ls 
-8. Sometimes docker wouldn't run only if I kill em
 
 
 
